@@ -8,7 +8,37 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/btnSignIn3"
+        android:layout_width="73dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/signupmini"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/textView18"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/signinbtnmini" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="205dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Got an account already?"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <ImageButton
+        android:id="@+id/btnSignUp"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginStart="106dp"
@@ -19,12 +49,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText5"
+        app:layout_constraintTop_toBottomOf="@+id/txtConfirmPass"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/signupbtn" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/txtLastName"
         android:layout_width="233dp"
         android:layout_height="38dp"
         android:layout_marginStart="89dp"
@@ -42,10 +72,10 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/txtPassword1"
         android:layout_width="233dp"
         android:layout_height="38dp"
         android:layout_marginStart="89dp"
@@ -63,10 +93,10 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/txtConfirmPass"
         android:layout_width="233dp"
         android:layout_height="38dp"
         android:layout_marginStart="89dp"
@@ -85,7 +115,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword1"
         app:layout_constraintVertical_bias="0.009" />
 
     <ImageButton
@@ -115,7 +145,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/txtFirstName"
         android:layout_width="233dp"
         android:layout_height="38dp"
         android:layout_marginStart="89dp"
@@ -133,17 +163,18 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUsername1" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="238dp"
         android:layout_height="75dp"
         android:layout_marginStart="89dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="84dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="89dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/signuplbl" />
@@ -163,10 +194,10 @@
         app:srcCompat="@drawable/fbicon" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/txtUsername1"
         android:layout_width="233dp"
         android:layout_height="38dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="76dp"
         android:background="#939393"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
@@ -179,6 +210,6 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
