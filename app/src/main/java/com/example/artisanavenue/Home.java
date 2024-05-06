@@ -59,14 +59,14 @@ public class Home extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
 
-            ImageSlider imageSlider = findViewById(R.id.imageSlider);
-            ArrayList<SlideModel> slideModels = new ArrayList<>();
-
-            slideModels.add(new SlideModel(R.drawable.slide1, ScaleTypes.FIT));
-            slideModels.add(new SlideModel(R.drawable.slide2, ScaleTypes.FIT));
-            slideModels.add(new SlideModel(R.drawable.slide3, ScaleTypes.FIT));
-
-            imageSlider.setImageList(slideModels, ScaleTypes.FIT);
+//            ImageSlider imageSlider = findViewById(R.id.imageSlider);
+//            ArrayList<SlideModel> slideModels = new ArrayList<>();
+//
+//            slideModels.add(new SlideModel(R.drawable.slide1, ScaleTypes.FIT));
+//            slideModels.add(new SlideModel(R.drawable.slide2, ScaleTypes.FIT));
+//            slideModels.add(new SlideModel(R.drawable.slide3, ScaleTypes.FIT));
+//
+//            imageSlider.setImageList(slideModels, ScaleTypes.FIT);
         }
     }
 
