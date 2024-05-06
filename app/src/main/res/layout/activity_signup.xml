@@ -11,78 +11,92 @@
         android:id="@+id/imageButton5"
         android:layout_width="200dp"
         android:layout_height="60dp"
+        android:layout_marginStart="106dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="106dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText5"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/signupbtn"
-        tools:layout_editor_absoluteX="105dp" />
+        app:srcCompat="@drawable/signupbtn" />
 
     <EditText
         android:id="@+id/editTextText3"
         android:layout_width="233dp"
         android:layout_height="38dp"
+        android:layout_marginStart="89dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="89dp"
         android:background="#939393"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:fontFamily="@font/montserrat"
+        android:hint="Last Name"
         android:inputType="text"
         android:paddingStart="10sp"
         android:paddingEnd="10sp"
-        android:text="Last Name"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
-        tools:layout_editor_absoluteX="89dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
     <EditText
         android:id="@+id/editTextText4"
         android:layout_width="233dp"
         android:layout_height="38dp"
+        android:layout_marginStart="89dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="89dp"
         android:background="#939393"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:fontFamily="@font/montserrat"
+        android:hint="Password"
         android:inputType="text"
         android:paddingStart="10sp"
         android:paddingEnd="10sp"
-        android:text="Password"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3"
-        tools:layout_editor_absoluteX="89dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
 
     <EditText
         android:id="@+id/editTextText5"
         android:layout_width="233dp"
         android:layout_height="38dp"
+        android:layout_marginStart="89dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="89dp"
         android:background="#939393"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:fontFamily="@font/montserrat"
+        android:hint="Confirm Password"
         android:inputType="text"
         android:paddingStart="10sp"
         android:paddingEnd="10sp"
-        android:text="Username"
         android:textColor="#000000"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText4"
-        app:layout_constraintVertical_bias="0.009"
-        tools:layout_editor_absoluteX="89dp" />
+        app:layout_constraintVertical_bias="0.009" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="55dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="143dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/googleicon" />
@@ -96,26 +110,30 @@
         android:text="or"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        tools:layout_editor_absoluteX="197dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/editTextText2"
         android:layout_width="233dp"
         android:layout_height="38dp"
+        android:layout_marginStart="89dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="89dp"
         android:background="#939393"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:fontFamily="@font/montserrat"
+        android:hint="First Name"
         android:inputType="text"
         android:paddingStart="10sp"
         android:paddingEnd="10sp"
-        android:text="First Name"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        tools:layout_editor_absoluteX="89dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -134,10 +152,13 @@
         android:id="@+id/imageButton2"
         android:layout_width="55dp"
         android:layout_height="50dp"
+        android:layout_marginStart="142dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/fbicon" />
 
@@ -145,18 +166,19 @@
         android:id="@+id/editTextText"
         android:layout_width="233dp"
         android:layout_height="38dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="88dp"
         android:background="#939393"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:fontFamily="@font/montserrat"
+        android:hint="Username"
         android:inputType="text"
         android:paddingStart="10sp"
         android:paddingEnd="10sp"
-        android:text="Username"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="89dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
