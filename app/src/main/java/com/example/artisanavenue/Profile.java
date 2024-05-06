@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,30 +17,16 @@ import android.widget.ImageButton;
  */
 public class Profile extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    ImageButton btnlogout;
 
     public Profile() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Profile.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Profile newInstance(String param1, String param2) {
         Profile fragment = new Profile();
         Bundle args = new Bundle();
@@ -57,31 +43,37 @@ public class Profile extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        // Find the ImageButton in the inflated layout
-        btnlogout = view.findViewById(R.id.btnLogout);
+        // Find the logout button by its ID
+        Button btnLogout = rootView.findViewById(R.id.btnLogout);
 
-        // Set OnClickListener for btnlogout
-        btnlogout.setOnClickListener(new View.OnClickListener() {
+        // Set OnClickListener for the logout button
+        btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to SignIn activity (signin.class) on button click
-                Intent intent = new Intent(getActivity(), signin.class);
-                startActivity(intent);
-
-                // Finish the current activity (fragment)
-                getActivity().finish();
+                // Handle logout button click here
+                // Perform logout actions (e.g., clear session, navigate to sign-in screen)
+                logoutUser();
             }
         });
 
-        return view;
+        return rootView;
+    }
+
+    // Method to handle logout action
+    private void logoutUser() {
+        // Implement logout logic here
+        // For example, you can clear session, navigate to sign-in screen, etc.
+        // You can start a new activity (e.g., SignInActivity) after logout
+        // Here's an example to navigate to the sign-in screen:
+        startActivity(new Intent(getActivity(), signin.class));
+        getActivity().finish(); // Close the current activity after navigating to sign-in
     }
 }
