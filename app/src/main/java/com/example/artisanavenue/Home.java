@@ -8,6 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link Home#newInstance} factory method to
@@ -52,6 +58,15 @@ public class Home extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
+            ImageSlider imageSlider = findViewById(R.id.imageSlider);
+            ArrayList<SlideModel> slideModels = new ArrayList<>();
+
+            slideModels.add(new SlideModel(R.drawable.slide1, ScaleTypes.FIT));
+            slideModels.add(new SlideModel(R.drawable.slide2, ScaleTypes.FIT));
+            slideModels.add(new SlideModel(R.drawable.slide3, ScaleTypes.FIT));
+
+            imageSlider.setImageList(slideModels, ScaleTypes.FIT);
         }
     }
 
