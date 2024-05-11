@@ -73,7 +73,7 @@ public class Profile extends Fragment {
         // For example, you can clear session, navigate to sign-in screen, etc.
         // You can start a new activity (e.g., SignInActivity) after logout
         // Here's an example to navigate to the sign-in screen:
-        startActivity(new Intent(getActivity(), signin.class));
+        startActivity(new Intent(getActivity(), SignIn.class));
         getActivity().finish(); // Close the current activity after navigating to sign-in
     }
 }
