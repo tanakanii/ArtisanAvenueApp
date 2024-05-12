@@ -1,6 +1,8 @@
 package com.example.artisanavenue;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.artisanavenue.databinding.ActivityMainBinding;
+import com.example.artisanavenue.databinding.FragmentProfileBinding;
+import com.example.artisanavenue.utilities.Constants;
+import com.example.artisanavenue.utilities.PreferenceManager;
+
+import android.util.Base64;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +32,8 @@ public class Profile extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private FragmentProfileBinding binding;
+    private PreferenceManager preferenceManager;
     public Profile() {
         // Required empty public constructor
     }
@@ -48,32 +59,57 @@ public class Profile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+        // Inflate the layout for this fragment using data binding
+        binding = FragmentProfileBinding.inflate(inflater, container, false);
+        View rootView = binding.getRoot();
 
-        // Find the logout button by its ID
-        Button btnLogout = rootView.findViewById(R.id.btnLogout);
+        preferenceManager = new PreferenceManager(requireContext()); // Use requireContext()
+
+        loadUserDetails(); // Load user details from preferences
 
         // Set OnClickListener for the logout button
-        btnLogout.setOnClickListener(new View.OnClickListener() {
+        binding.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle logout button click here
-                // Perform logout actions (e.g., clear session, navigate to sign-in screen)
-                logoutUser();
+                logoutUser(); // Handle logout button click
             }
         });
 
         return rootView;
     }
 
+
+    private void loadUserDetails() {
+        String firstName = preferenceManager.getString(Constants.KEY_FIRST_NAME);
+        String lastName = preferenceManager.getString(Constants.KEY_LAST_NAME);
+        String fullName = firstName + " " + lastName;
+
+        // Ensure binding object is initialized and views are available
+        if (binding != null) {
+            binding.textName.setText(fullName); // Set user's name
+        }
+
+        String base64Image = preferenceManager.getString(Constants.KEY_IMAGE);
+        if (base64Image != null && !base64Image.isEmpty()) {
+            byte[] imageData = Base64.decode(base64Image, Base64.DEFAULT); // Use Base64.decode directly
+            Bitmap bitmap = BitmapFactory.decodeByteArray(imageData, 0, imageData.length);
+
+            // Ensure binding object is initialized and views are available
+            if (binding != null) {
+                binding.profileImage.setImageBitmap(bitmap); // Set user's profile image
+            }
+        }
+    }
+
     // Method to handle logout action
     private void logoutUser() {
-        // Implement logout logic here
-        // For example, you can clear session, navigate to sign-in screen, etc.
-        // You can start a new activity (e.g., SignInActivity) after logout
-        // Here's an example to navigate to the sign-in screen:
-        startActivity(new Intent(getActivity(), SignIn.class));
-        getActivity().finish(); // Close the current activity after navigating to sign-in
+        // Clear any user session data (if needed)
+        // For example: preferenceManager.clearPreferences();
+
+        // Navigate to the sign-in activity
+        Intent intent = new Intent(requireActivity(), SignIn.class);
+        startActivity(intent);
+        requireActivity().finish(); // Close the current activity (profile screen)
     }
+
 }
