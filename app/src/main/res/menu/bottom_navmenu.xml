@@ -16,6 +16,11 @@
         android:icon="@drawable/artisansicon"
         android:title="Artisans"
         android:visible="true" />
+<!--    <item
+        android:id="@+id/message"
+        android:icon="@drawable/messaging"
+        android:title="Chats"
+        android:visible="true" />-->
     <item
         android:id="@+id/blogs"
         android:icon="@drawable/blogsicon"

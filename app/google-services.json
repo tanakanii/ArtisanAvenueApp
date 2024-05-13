@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1002184960056",
+    "project_id": "artisan-avenue-8052e",
+    "storage_bucket": "artisan-avenue-8052e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002184960056:android:b073cb58b3239b6b785ecd",
+        "android_client_info": {
+          "package_name": "com.example.artisanavenue"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuDGpCPlXqtjN-Z9LQCRBkY2BB7L0UnRY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
