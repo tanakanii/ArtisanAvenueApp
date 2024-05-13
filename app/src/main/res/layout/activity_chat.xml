@@ -48,6 +48,14 @@
     </LinearLayout>
 
     <View
+        android:id="@+id/headerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#D7B28D"
+        app:layout_constraintBottom_toTopOf="@id/viewSupporter"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"/>
+
+    <View
         android:id="@+id/viewBackground"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -94,7 +102,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageBack3"
+        android:id="@+id/imageBack"
         android:layout_width="30dp"
         android:layout_height="30dp"
 
@@ -126,10 +134,18 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageBack3"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBack"
         app:layout_constraintEnd_toStartOf="@+id/imageBack4"
-        app:layout_constraintStart_toEndOf="@+id/imageBack3"
-        app:layout_constraintTop_toTopOf="@+id/imageBack3" />
+        app:layout_constraintStart_toEndOf="@+id/imageBack"
+        app:layout_constraintTop_toTopOf="@+id/imageBack" />
+
+    <View
+        android:id="@+id/viewSupporter"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#D7B28D"
+        app:layout_constraintTop_toBottomOf="@id/imageBack" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
@@ -142,5 +158,14 @@
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/viewBackground"
-        app:layout_constraintTop_toBottomOf="@id/imageBack3"/>
+        app:layout_constraintTop_toBottomOf="@id/viewSupporter"
+        app:stackFromEnd="true" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/viewBackground"
+        app:layout_constraintEnd_toEndOf="@id/viewBackground"
+        app:layout_constraintStart_toStartOf="@id/viewBackground"
+        app:layout_constraintTop_toTopOf="@id/viewBackground"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

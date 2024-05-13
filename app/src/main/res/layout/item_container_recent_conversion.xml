@@ -42,7 +42,7 @@
         app:layout_constraintStart_toEndOf="@id/imageProfile" />
 
     <TextView
-        android:id="@+id/textEmail"
+        android:id="@+id/textRecentMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -51,7 +51,7 @@
         android:fontFamily="@font/montserrat"
         android:maxLines="1"
         android:textColor="@color/black"
-        android:textSize="11sp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imageProfile"
         app:layout_constraintTop_toBottomOf="@id/viewSupporter"

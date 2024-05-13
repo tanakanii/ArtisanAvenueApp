@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -16,8 +17,14 @@ import com.example.artisanavenue.databinding.ActivityMainBinding;
 import com.example.artisanavenue.databinding.FragmentProfileBinding;
 import com.example.artisanavenue.utilities.Constants;
 import com.example.artisanavenue.utilities.PreferenceManager;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import android.util.Base64;
+import android.widget.Toast;
+
+import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -71,7 +78,7 @@ public class Profile extends Fragment {
         binding.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                logoutUser(); // Handle logout button click
+                showLogoutConfirmationDialog();
             }
         });
 
@@ -100,16 +107,32 @@ public class Profile extends Fragment {
             }
         }
     }
+    private void showToast(String message){
+        Toast.makeText(requireActivity(), message, Toast.LENGTH_SHORT).show();
+    }
 
-    // Method to handle logout action
+    private void showLogoutConfirmationDialog() {
+        new AlertDialog.Builder(requireContext())
+                .setTitle("Sign Out")
+                .setMessage("Are you sure you want to sign out?")
+                .setPositiveButton("Yes", (dialog, which) -> logoutUser())
+                .setNegativeButton("No", null)
+                .show();
+    }
     private void logoutUser() {
-        // Clear any user session data (if needed)
-        // For example: preferenceManager.clearPreferences();
-
-        // Navigate to the sign-in activity
-        Intent intent = new Intent(requireActivity(), SignIn.class);
-        startActivity(intent);
-        requireActivity().finish(); // Close the current activity (profile screen)
+        showToast("Signed out!");
+        FirebaseFirestore database = FirebaseFirestore.getInstance();
+        DocumentReference documentReference =
+                database.collection(Constants.KEY_COLLECTION_USERS).document(
+                        preferenceManager.getString(Constants.KEY_USER_ID)
+                );
+        HashMap<String, Object> updates = new HashMap<>();
+        updates.put(Constants.KEY_FCM_TOKEN, FieldValue.delete());
+        documentReference.update(updates)
+                .addOnSuccessListener(unused -> {
+                    preferenceManager.clear();
+                    startActivity(new Intent(requireActivity(), SignIn.class));
+                });
     }
 
 }
