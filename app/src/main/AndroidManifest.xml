@@ -16,7 +16,7 @@
         android:theme="@style/Theme.ArtisanAvenue"
         tools:targetApi="31">
         <activity
-            android:name=".ArtisansStore"
+            android:name=".Settings"
             android:exported="false" />
         <activity
             android:name=".ChatActivity"

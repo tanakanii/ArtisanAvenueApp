@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsMenu"
+    android:id="@+id/settings">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="General"
+            android:textColor="#974B34"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/account"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#00FFFFFF"
+            android:drawableLeft="@drawable/account"
+            android:drawableRight="@drawable/forward"
+            android:fontFamily="@font/montserrat_medium"
+            android:padding="0dp"
+            android:text="Account"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="330dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/notification"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#00FFFFFF"
+            android:drawableLeft="@drawable/alarm"
+            android:drawableRight="@drawable/forward"
+            android:fontFamily="@font/montserrat_medium"
+            android:padding="0dp"
+            android:text="Notifications"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="330dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/addresses"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#00FFFFFF"
+            android:drawableLeft="@drawable/address"
+            android:drawableRight="@drawable/forward"
+            android:fontFamily="@font/montserrat_medium"
+            android:padding="0dp"
+            android:text="Addresses"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="330dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/payment_method"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#00FFFFFF"
+            android:drawableLeft="@drawable/payment"
+            android:drawableRight="@drawable/forward"
+            android:fontFamily="@font/montserrat_medium"
+            android:padding="0dp"
+            android:text="Payment Method"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="330dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
+
+</FrameLayout>
