@@ -1,64 +1,72 @@
 package com.example.artisanavenue;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Products#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.artisanavenue.models.Product;
+import com.example.artisanavenue.utilities.Constants;
+import com.example.artisanavenue.utilities.PreferenceManager;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 public class Products extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private RecyclerView recyclerView;
+    private com.example.artisanavenue.ProductAdapter productAdapter;
+    private List<Product> productList;
+    private PreferenceManager preferenceManager;
+    private View progressBar;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
-    public Products() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Products.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Products newInstance(String param1, String param2) {
-        Products fragment = new Products();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_products, container, false);
+
+        recyclerView = view.findViewById(R.id.recyclerViewProducts);
+        progressBar = view.findViewById(R.id.progressBar3);
+        productList = new ArrayList<>();
+        productAdapter = new com.example.artisanavenue.ProductAdapter(productList);
+
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        recyclerView.setAdapter(productAdapter);
+
+        preferenceManager = new PreferenceManager(requireContext());
+        loadProducts();
+
+        return view;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_products, container, false);
+    private void loadProducts() {
+        FirebaseFirestore database = FirebaseFirestore.getInstance();
+
+        database.collection(Constants.KEY_COLLECTION_PRODUCTS)
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful() && task.getResult() != null && !task.getResult().isEmpty()) {
+                        for (QueryDocumentSnapshot documentSnapshot : task.getResult()) {
+                            Product product = new Product(
+                                    documentSnapshot.getString(Constants.KEY_PRODUCT_NAME),
+                                    documentSnapshot.getString(Constants.KEY_PRODUCT_CATEGORY),
+                                    documentSnapshot.getString(Constants.KEY_PRODUCT_PRICE),
+                                    documentSnapshot.getString(Constants.KEY_PRODUCT_DESCRIPTION),
+                                    documentSnapshot.getString(Constants.KEY_PRODUCT_IMAGE)
+                            );
+                            productList.add(product);
+                        }
+                        productAdapter.notifyDataSetChanged();
+                    }
+                    progressBar.setVisibility(View.GONE);
+                });
     }
 }

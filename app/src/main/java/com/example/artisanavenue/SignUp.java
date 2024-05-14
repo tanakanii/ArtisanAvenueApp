@@ -33,9 +33,6 @@ import java.util.Objects;
 
 public class SignUp extends AppCompatActivity {
 
-    EditText username, first_name, last_name, password, repassword;
-    ImageButton btnsignup, btnsignin3;
-    DBhelper DB;
     private String encodedImage;
     private ActivitySignupBinding binding;
     private PreferenceManager preferenceManager;
@@ -47,51 +44,8 @@ public class SignUp extends AppCompatActivity {
         setContentView(binding.getRoot());
         preferenceManager = new PreferenceManager(getApplicationContext());
 
-        username = (EditText) findViewById(R.id.txtUsername1);
-        first_name = (EditText) findViewById(R.id.txtFirstName);
-        last_name = (EditText) findViewById(R.id.txtLastName);
-        password = (EditText) findViewById(R.id.txtPassword1);
-        repassword = (EditText) findViewById(R.id.txtConfirmPass);
-/*        btnsignup = (ImageButton) findViewById(R.id.btnSignUp);
-        btnsignin3 = (ImageButton) findViewById(R.id.btnSignIn3);*/
-        DB = new DBhelper(this);
         setListeners();
 
-
-        /*btnsignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String user = username.getText().toString().trim();
-                String firstname = first_name.getText().toString().trim();
-                String lastname = last_name.getText().toString().trim();
-                String pass = password.getText().toString().trim();
-                String repass = repassword.getText().toString().trim();
-
-                if (user.equals("") || pass.equals("") || firstname.equals("") ||
-                        lastname.equals("") || repass.equals(""))
-                    Toast.makeText(SignUp.this, "Please fill all of the entry!", Toast.LENGTH_SHORT).show();
-                else {
-                    if (pass.equals(repass)) {
-                        Boolean checkuser = DB.checkusername(user);
-                        if(checkuser==false){
-                            Boolean insert = DB.insertData(user, pass, firstname, lastname);
-                            if(insert==true){
-                                Toast.makeText(SignUp.this, "Registered Success!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                startActivity(intent);
-                            } else {
-                                Toast.makeText(SignUp.this, "Registered Failed. Please try again.", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                        else{
-                            Toast.makeText(SignUp.this, "User already exists, Sign-in!", Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(SignUp.this, "Password do not match!", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-        });*/
     }
     private void setListeners() {
         binding.btnSignIn3.setOnClickListener(v ->
