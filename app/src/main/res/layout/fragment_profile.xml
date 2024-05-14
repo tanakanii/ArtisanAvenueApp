@@ -51,16 +51,6 @@
             android:background="@drawable/profile_bg"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/montserrat_semibold"
-                android:gravity="center|bottom"
-                android:text="JOHN DOE"
-                android:textColor="#000000"
-                android:textSize="20sp" />
         </LinearLayout>
 
         <ImageView
@@ -496,6 +486,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center|bottom"
+                android:text="JOHN DOE"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="6dp"
+                tools:layout_editor_absoluteY="-31dp" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
