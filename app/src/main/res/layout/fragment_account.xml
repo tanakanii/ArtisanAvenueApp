@@ -1,15 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Accounts">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="ACCOUNT PAGE"
-        android:gravity="center"/>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Account"
+            android:textColor="#974B34"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="Username"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="13"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:hint="username"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="First Name"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_fname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:ems="13"
+                android:inputType="text"
+                android:hint="first name"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="Last Name"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_lname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="13"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:hint="last name"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Password"
+            android:fontFamily="@font/montserrat"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="13"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:hint="password"
+            android:fontFamily="@font/montserrat"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/custom_button_color"
+            android:text="SAVE"
+            app:cornerRadius="2dp"
+            android:padding="5dp"
+            android:fontFamily="@font/montserrat"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"/>
+    </LinearLayout>
 
 </FrameLayout>
