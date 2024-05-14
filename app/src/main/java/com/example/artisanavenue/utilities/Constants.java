@@ -24,5 +24,18 @@ public class Constants {
     public static final String KEY_SENDER_IMAGE = "senderImage";
     public static final String KEY_RECEIVER_IMAGE = "receiverImage";
     public static final String KEY_LAST_MESSAGE = "lastMessage";
+    public static final String KEY_COLLECTION_SHOPS = "shops";
+    public static final String KEY_SHOP_NAME = "shopName";
+    public static final String KEY_SHOP_ADDRESS = "shopAddress";
+    public static final String KEY_SHOP_DESCRIPTION = "shopDesc";
+    public static final String KEY_SHOP_IMAGE = "shopImage";
+    public static final String KEY_COLLECTION_PRODUCTS = "products";
+    public static final String KEY_SHOP_ID = "productId";
+    public static final String KEY_PRODUCT_NAME = "productName";
+    public static final String KEY_PRODUCT_CATEGORY = "productCategory";
+    public static final String KEY_PRODUCT_PRICE = "productPrice";
+    public static final String KEY_PRODUCT_DESCRIPTION = "productDesc";
+    public static final String KEY_PRODUCT_IMAGE = "productImage";
+
 
 }

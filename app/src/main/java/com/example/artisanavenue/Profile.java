@@ -74,11 +74,16 @@ public class Profile extends Fragment {
 
         loadUserDetails(); // Load user details from preferences
 
-        // Set OnClickListener for the logout button
         binding.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showLogoutConfirmationDialog();
+            }
+        });
+        binding.startSellingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(requireActivity(), AddShop.class));
             }
         });
 
@@ -91,19 +96,17 @@ public class Profile extends Fragment {
         String lastName = preferenceManager.getString(Constants.KEY_LAST_NAME);
         String fullName = firstName + " " + lastName;
 
-        // Ensure binding object is initialized and views are available
         if (binding != null) {
-            binding.textName.setText(fullName); // Set user's name
+            binding.textName.setText(fullName);
         }
 
         String base64Image = preferenceManager.getString(Constants.KEY_IMAGE);
         if (base64Image != null && !base64Image.isEmpty()) {
-            byte[] imageData = Base64.decode(base64Image, Base64.DEFAULT); // Use Base64.decode directly
+            byte[] imageData = Base64.decode(base64Image, Base64.DEFAULT);
             Bitmap bitmap = BitmapFactory.decodeByteArray(imageData, 0, imageData.length);
 
-            // Ensure binding object is initialized and views are available
             if (binding != null) {
-                binding.profileImage.setImageBitmap(bitmap); // Set user's profile image
+                binding.profileImage.setImageBitmap(bitmap);
             }
         }
     }
@@ -120,7 +123,6 @@ public class Profile extends Fragment {
                 .show();
     }
     private void logoutUser() {
-        showToast("Signed out!");
         FirebaseFirestore database = FirebaseFirestore.getInstance();
         DocumentReference documentReference =
                 database.collection(Constants.KEY_COLLECTION_USERS).document(
@@ -132,6 +134,7 @@ public class Profile extends Fragment {
                 .addOnSuccessListener(unused -> {
                     preferenceManager.clear();
                     startActivity(new Intent(requireActivity(), SignIn.class));
+                    showToast("Signed out!");
                 });
     }
 
