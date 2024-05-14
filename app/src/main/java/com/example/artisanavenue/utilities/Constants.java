@@ -37,5 +37,9 @@ public class Constants {
     public static final String KEY_PRODUCT_DESCRIPTION = "productDesc";
     public static final String KEY_PRODUCT_IMAGE = "productImage";
 
+    public static final String KEY_COLLECTION_ADDRESSES =  "addresses";
 
+    public static final String KEY_ADDRESS_LABEL = "addressLabel";
+
+    public static final String KEY_ADDRESS_DETAILS = "addressDetails";
 }
