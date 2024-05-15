@@ -23,9 +23,6 @@
             android:name=".ProductDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".AddAddress"
-            android:exported="false" />
-        <activity
             android:name=".Settings"
             android:exported="false" />
         <activity

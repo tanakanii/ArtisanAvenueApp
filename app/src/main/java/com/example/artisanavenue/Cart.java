@@ -1,5 +1,12 @@
 package com.example.artisanavenue;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+
+import androidx.appcompat.widget.AppCompatImageView;
+
 import com.example.artisanavenue.models.Product;
 import com.example.artisanavenue.utilities.Constants;
 import com.example.artisanavenue.utilities.PreferenceManager;

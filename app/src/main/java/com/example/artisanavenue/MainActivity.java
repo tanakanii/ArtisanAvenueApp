@@ -2,6 +2,8 @@ package com.example.artisanavenue;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,11 +22,17 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private PreferenceManager preferenceManager;
+
+    ImageButton settingsButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        settingsButton = findViewById(R.id.settings_btn_profile);
+        settingsButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Settings.class)));
+
         preferenceManager = new PreferenceManager(getApplicationContext());
         replaceFragment(new Home());
         setListeners();
@@ -47,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
-
     }
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -77,5 +84,7 @@ public class MainActivity extends AppCompatActivity {
         documentReference.update(Constants.KEY_FCM_TOKEN, token)
                 .addOnFailureListener(e -> showToast("Unable to update token"));
     }
+
+
 
 }

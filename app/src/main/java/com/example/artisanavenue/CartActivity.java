@@ -1,10 +1,14 @@
 package com.example.artisanavenue;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,6 +27,9 @@ public class CartActivity extends AppCompatActivity {
     private PreferenceManager preferenceManager;
     private View progressBar;
 
+    ImageButton backButton;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +38,9 @@ public class CartActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerViewCart);
         progressBar = findViewById(R.id.progressBarCart);
         preferenceManager = new PreferenceManager(getApplicationContext());
+        backButton = findViewById(R.id.back_btn);
 
+        backButton.setOnClickListener(v -> {finish();});
         String userId = preferenceManager.getString(Constants.KEY_USER_ID);
         Cart cart = Cart.getInstance(userId);
         cart.loadCartItems(cartItems -> {
