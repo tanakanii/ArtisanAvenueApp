@@ -16,6 +16,9 @@
         android:theme="@style/Theme.ArtisanAvenue"
         tools:targetApi="31" >
         <activity
+            android:name=".AddAddress"
+            android:exported="false" />
+        <activity
             android:name=".Settings"
             android:exported="false" />
         <activity
