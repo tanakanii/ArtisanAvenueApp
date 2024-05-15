@@ -26,7 +26,6 @@ public class CartActivity extends AppCompatActivity {
     private List<Product> cartItems;
     private PreferenceManager preferenceManager;
     private View progressBar;
-
     ImageButton backButton;
 
     @SuppressLint("MissingInflatedId")
@@ -40,7 +39,7 @@ public class CartActivity extends AppCompatActivity {
         preferenceManager = new PreferenceManager(getApplicationContext());
         backButton = findViewById(R.id.back_btn);
 
-        backButton.setOnClickListener(v -> {finish();});
+        backButton.setOnClickListener(v -> startActivity(new Intent(CartActivity.this, MainActivity.class)));
         String userId = preferenceManager.getString(Constants.KEY_USER_ID);
         Cart cart = Cart.getInstance(userId);
         cart.loadCartItems(cartItems -> {
