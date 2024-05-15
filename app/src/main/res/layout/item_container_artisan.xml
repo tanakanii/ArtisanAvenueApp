@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:padding="5dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_image"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/artisan_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Artisan Name"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageProfile" />
+
+    <TextView
+        android:id="@+id/followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="number of followers"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artisan_name" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="store address"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/followers" />
+
+    <Button
+        android:id="@+id/follow_btn"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#974B34"
+        android:fontFamily="@font/montserrat"
+        android:padding="2dp"
+        android:text="FOLLOW"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address" />
+
+    <Button
+        android:id="@+id/view_shop_btn"
+        android:layout_width="73dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/montserrat"
+        android:padding="2dp"
+        android:text="VIEW SHOP"
+        android:textColor="#974B34"
+        android:textSize="9dp"
+        android:background="@drawable/outer_border_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/follow_btn"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        app:layout_goneMarginTop="2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

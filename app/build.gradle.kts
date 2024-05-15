@@ -51,4 +51,6 @@ dependencies {
 
     implementation("androidx.multidex:multidex:2.0.1")
     implementation("com.makeramen:roundedimageview:2.3.0")
+
+    implementation("com.github.denzcoskun:ImageSlideshow:0.1.0")
 }

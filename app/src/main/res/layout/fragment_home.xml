@@ -68,15 +68,15 @@
             app:cardCornerRadius="27dp"
             app:cardElevation="20dp">
 
-<!--            <com.denzcoskun.imageslider.ImageSlider-->
-<!--                android:id="@+id/imageSlider"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="200dp"-->
-<!--                android:background="@color/light_brown"-->
-<!--                app:iss_auto_cycle="true"-->
-<!--                app:iss_corner_radius="20"-->
-<!--                app:iss_delay="1000"-->
-<!--                app:iss_period="1500" />-->
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/custom_button_color"
+                app:iss_auto_cycle="true"
+                app:iss_corner_radius="20"
+                app:iss_delay="1000"
+                app:iss_period="1500" />
 
         </androidx.cardview.widget.CardView>
 
