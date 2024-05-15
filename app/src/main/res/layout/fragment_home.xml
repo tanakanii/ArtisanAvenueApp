@@ -37,8 +37,16 @@
                 android:hint="Search"
                 android:inputType="text"
                 android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:layout_marginEnd="50dp"/>
+                android:paddingEnd="15dp" />
+
+            <ImageView
+                android:id="@+id/none"
+                android:layout_width="1dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter" />
+
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
@@ -86,57 +94,57 @@
                 <ImageButton
                     android:id="@+id/baskets_categorybtn"
                     android:layout_width="70dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:scaleType="centerInside"
-                    android:src="@drawable/baskets_category" />
+                    android:src="@drawable/baskets" />
 
 
                 <ImageButton
                     android:id="@+id/glassart_categorybtn"
                     android:layout_width="70dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:scaleType="centerInside"
-                    android:src="@drawable/glassart_category" />
+                    android:src="@drawable/glass_art" />
 
                 <ImageButton
                     android:id="@+id/woodcarving_categorybtn"
                     android:layout_width="70dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:scaleType="centerInside"
-                    android:src="@drawable/woodcarving_category" />
+                    android:src="@drawable/wood_carving_cat" />
 
                 <ImageButton
                     android:id="@+id/ceramics_categorybtn"
                     android:layout_width="70dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ceramics_category" />
+                    android:src="@drawable/ceramics_cat" />
 
                 <ImageButton
                     android:id="@+id/furniture_categorybtn"
                     android:layout_width="70dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:scaleType="centerInside"
-                    android:src="@drawable/furniture_category" />
+                    android:src="@drawable/furniture_cat" />
 
                 <ImageButton
                     android:id="@+id/jewelry_categorybtn"
                     android:layout_width="75dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:scaleType="centerInside"
-                    android:src="@drawable/jewelry_category" />
+                    android:src="@drawable/jewelry_cat" />
 
 
             </LinearLayout>
@@ -146,25 +154,34 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="207dp"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/new_arrivals"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="333dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:src="@drawable/new_arrivals" />
 
-            <ImageButton
-                android:id="@+id/featured"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="333dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:src="@drawable/featured" />
 
-            <ImageButton
-                android:id="@+id/trending_now"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="333dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:src="@drawable/trending_now" />
 
         </LinearLayout>
@@ -184,21 +201,33 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/product1_home"
+                android:layout_width="105dp"
+                android:layout_height="146dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:src="@drawable/product1_home" />
 
+            <ImageButton
+                android:id="@+id/product2_home"
+                android:layout_width="105dp"
+                android:layout_height="146dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:src="@drawable/product2_home" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="105dp"
+                android:layout_height="146dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:src="@drawable/product3_home" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/meettheartisan_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/montserrat_semibold"
-            android:text="MEET THE ARTISANS"
-            android:textSize="20dp" />
 
 
         <!--        <RelativeLayout-->
