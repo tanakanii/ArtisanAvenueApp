@@ -13,31 +13,28 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.artisanavenue.R;
-import com.example.artisanavenue.listeners.ProductClickListener;
 import com.example.artisanavenue.models.Product;
 
 import java.util.List;
 
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
+public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder> {
 
-    private final List<Product> products;
-    private final ProductClickListener productClickListener;
+    private final List<Product> cartItems;
 
-    public ProductAdapter(List<Product> products, ProductClickListener productClickListener) {
-        this.products = products;
-        this.productClickListener = productClickListener;
+    public CartAdapter(List<Product> cartItems) {
+        this.cartItems = cartItems;
     }
 
     @NonNull
     @Override
-    public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_container_product, parent, false);
-        return new ProductViewHolder(view);
+    public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_container_cart, parent, false);
+        return new CartViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
-        Product product = products.get(position);
+    public void onBindViewHolder(@NonNull CartViewHolder holder, int position) {
+        Product product = cartItems.get(position);
         holder.textProductName.setText(product.getName());
         holder.textProductPrice.setText(product.getPrice());
 
@@ -49,20 +46,18 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         } else {
             holder.imageProduct.setImageResource(R.drawable.interest_textile); // Placeholder image if no image is available
         }
-
-        holder.itemView.setOnClickListener(v -> productClickListener.onProductClicked(product));
     }
 
     @Override
     public int getItemCount() {
-        return products.size();
+        return cartItems.size();
     }
 
-    static class ProductViewHolder extends RecyclerView.ViewHolder {
+    static class CartViewHolder extends RecyclerView.ViewHolder {
         ImageView imageProduct;
         TextView textProductName, textProductPrice;
 
-        ProductViewHolder(@NonNull View itemView) {
+        CartViewHolder(@NonNull View itemView) {
             super(itemView);
             imageProduct = itemView.findViewById(R.id.imageProduct);
             textProductName = itemView.findViewById(R.id.textProductName);

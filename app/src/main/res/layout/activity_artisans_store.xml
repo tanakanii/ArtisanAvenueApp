@@ -111,6 +111,379 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <ImageView
+                    android:id="@+id/imageViewrecommended2"
+                    android:layout_width="178dp"
+                    android:layout_height="207dp"
+                    android:src="@drawable/bg_artisan_store"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.896"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageViewBestSeller2"
+                    android:layout_width="178dp"
+                    android:layout_height="207dp"
+                    android:src="@drawable/bg_artisan_store"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.896"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.496" />
+
+                <ImageView
+                    android:id="@+id/imageViewBestSeller1"
+                    android:layout_width="178dp"
+                    android:layout_height="208dp"
+                    android:src="@drawable/bg_artisan_store"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.09"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.495" />
+
+                <ImageView
+                    android:id="@+id/imageViewRecommended1"
+                    android:layout_width="178dp"
+                    android:layout_height="208dp"
+                    android:src="@drawable/bg_artisan_store"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.09"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textViewProductName3"
+                    android:layout_width="151dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginTop="640dp"
+                    android:layout_marginEnd="226dp"
+                    android:layout_marginBottom="61dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="PRODUCT NAME"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewPrice3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginTop="661dp"
+                    android:layout_marginEnd="334dp"
+                    android:layout_marginBottom="37dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="PRICE"
+                    android:textColor="#974B34"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar3"
+                    android:layout_width="232dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="671dp"
+                    android:numStars="5"
+                    android:progressTint="#FFEB3B"
+                    android:rating="4.7"
+                    android:scaleX="0.3"
+                    android:scaleY="0.3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="-48dp" />
+
+                <TextView
+                    android:id="@+id/textViewSold3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="125dp"
+                    android:layout_marginTop="686dp"
+                    android:layout_marginEnd="226dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="5.7k+ sold"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/Product2"
+                    android:layout_width="155dp"
+                    android:layout_height="171dp"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="237dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="312dp"
+                    android:src="@drawable/p_bg_brown_line"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/Product3"
+                    android:layout_width="155dp"
+                    android:layout_height="171dp"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginTop="237dp"
+                    android:layout_marginEnd="222dp"
+                    android:layout_marginBottom="312dp"
+                    android:src="@drawable/p_bg_brown_line"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/Product4"
+                    android:layout_width="155dp"
+                    android:layout_height="171dp"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="496dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="53dp"
+                    android:src="@drawable/p_bg_brown_line"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/RProduct3"
+                    android:layout_width="155dp"
+                    android:layout_height="171dp"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginTop="496dp"
+                    android:layout_marginEnd="222dp"
+                    android:layout_marginBottom="53dp"
+                    android:src="@drawable/p_bg_brown_line"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewP1"
+                    android:layout_width="112dp"
+                    android:layout_height="98dp"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginTop="267dp"
+                    android:layout_marginEnd="245dp"
+                    android:layout_marginBottom="355dp"
+                    android:src="@drawable/p_artisan_store"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewProductName1"
+                    android:layout_width="151dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginTop="381dp"
+                    android:layout_marginEnd="226dp"
+                    android:layout_marginBottom="320dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="PRODUCT NAME"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewProductName2"
+                    android:layout_width="151dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="381dp"
+                    android:layout_marginEnd="39dp"
+                    android:layout_marginBottom="320dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="PRODUCT NAME"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewProductName4"
+                    android:layout_width="151dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="640dp"
+                    android:layout_marginEnd="39dp"
+                    android:layout_marginBottom="61dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="PRODUCT NAME"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewPrice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginTop="407dp"
+                    android:layout_marginEnd="334dp"
+                    android:layout_marginBottom="291dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="PRICE"
+                    android:textColor="#974B34"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2Price4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="659dp"
+                    android:layout_marginEnd="147dp"
+                    android:layout_marginBottom="39dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="PRICE"
+                    android:textColor="#974B34"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewPrice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="406dp"
+                    android:layout_marginEnd="147dp"
+                    android:layout_marginBottom="292dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="PRICE"
+                    android:textColor="#974B34"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar4"
+                    android:layout_width="232dp"
+                    android:layout_height="49dp"
+                    android:numStars="5"
+                    android:progressTint="#FFEB3B"
+                    android:rating="4.7"
+                    android:scaleX="0.3"
+                    android:scaleY="0.3"
+                    tools:layout_editor_absoluteX="139dp"
+                    tools:layout_editor_absoluteY="671dp" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar2"
+                    android:layout_width="232dp"
+                    android:layout_height="49dp"
+                    android:numStars="5"
+                    android:progressTint="#FFEB3B"
+                    android:rating="4.7"
+                    android:scaleX="0.3"
+                    android:scaleY="0.3"
+                    tools:layout_editor_absoluteX="139dp"
+                    tools:layout_editor_absoluteY="416dp" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar1"
+                    android:layout_width="232dp"
+                    android:layout_height="49dp"
+                    android:numStars="5"
+                    android:progressTint="#FFEB3B"
+                    android:rating="4.7"
+                    android:scaleX="0.3"
+                    android:scaleY="0.3"
+                    tools:layout_editor_absoluteX="-48dp"
+                    tools:layout_editor_absoluteY="417dp" />
+
+                <TextView
+                    android:id="@+id/textViewSold1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="125dp"
+                    android:layout_marginTop="434dp"
+                    android:layout_marginEnd="226dp"
+                    android:layout_marginBottom="267dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="5.7k+ sold"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewSold4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="313dp"
+                    android:layout_marginTop="683dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="5.7k+ sold"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewSold2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="312dp"
+                    android:layout_marginTop="434dp"
+                    android:layout_marginEnd="39dp"
+                    android:layout_marginBottom="267dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="5.7k+ sold"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewP2"
+                    android:layout_width="110dp"
+                    android:layout_height="99dp"
+                    android:layout_marginStart="242dp"
+                    android:layout_marginTop="266dp"
+                    android:layout_marginEnd="58dp"
+                    android:layout_marginBottom="355dp"
+                    android:src="@drawable/p2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <ImageButton
                     android:id="@+id/imageButton3"
                     android:layout_width="72dp"
@@ -192,6 +565,20 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <ImageView
+                    android:id="@+id/imageViewP3"
+                    android:layout_width="111dp"
+                    android:layout_height="117dp"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginTop="524dp"
+                    android:layout_marginEnd="246dp"
+                    android:layout_marginBottom="79dp"
+                    android:src="@drawable/pr_basket"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <ImageButton
                     android:id="@+id/filterButton"
                     android:layout_width="60dp"
@@ -204,6 +591,20 @@
                     android:onClick="showFilterOptions"
                     android:scaleType="fitXY"
                     android:src="@drawable/filter_btn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewP4"
+                    android:layout_width="135dp"
+                    android:layout_height="98dp"
+                    android:layout_marginStart="228dp"
+                    android:layout_marginTop="531dp"
+                    android:layout_marginEnd="47dp"
+                    android:layout_marginBottom="91dp"
+                    android:src="@drawable/pr"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

@@ -352,17 +352,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="165dp" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="116dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="10dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="centerInside"
-        android:src="@drawable/interest_skipbtn"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
     <ImageButton
