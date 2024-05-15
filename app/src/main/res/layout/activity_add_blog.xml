@@ -12,7 +12,7 @@
       android:layout_width="364dp"
       android:layout_height="134dp"
       android:layout_marginLeft="20dp"
-      android:layout_marginTop="14dp"
+      android:layout_marginTop="8dp"
       android:layout_marginRight="20dp"
       android:background="#888888"
       android:backgroundTint="#E2E2E2"
@@ -35,75 +35,20 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="16dp"
-      android:layout_marginTop="18dp"
       android:fontFamily="@font/montserrat_bold"
-      android:text="DESCRIPTION"
+      android:text="BLOG DESCRIPTION"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textProductPrice" />
-
-  <EditText
-      android:id="@+id/textProductCategory"
-      android:layout_width="0dp"
-      android:layout_height="46dp"
-      android:layout_marginLeft="20dp"
-      android:layout_marginTop="8dp"
-      android:layout_marginRight="20dp"
-      android:background="#939393"
-      android:backgroundTint="#E2E2E2"
-      android:ems="10"
-      android:fontFamily="@font/montserrat"
-      android:hint="Enter category"
-      android:inputType="text"
-      android:paddingStart="10sp"
-      android:paddingEnd="10sp"
-      android:textColor="#000000"
-      android:textSize="14sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textCategory" />
-
-  <EditText
-      android:id="@+id/textProductPrice"
-      android:layout_width="0dp"
-      android:layout_height="46dp"
-      android:layout_marginLeft="20dp"
-      android:layout_marginTop="7dp"
-      android:layout_marginRight="20dp"
-      android:background="#939393"
-      android:backgroundTint="#E2E2E2"
-      android:ems="10"
-      android:fontFamily="@font/montserrat"
-      android:hint="Enter product price"
-      android:inputType="text"
-      android:paddingStart="10sp"
-      android:paddingEnd="10sp"
-      android:textColor="#000000"
-      android:textSize="14sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textCategory2" />
-
-  <TextView
-      android:id="@+id/textCategory"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="16dp"
-      android:layout_marginTop="24dp"
-      android:fontFamily="@font/montserrat_bold"
-      android:text="CATEGORY"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textProductName" />
+      tools:layout_editor_absoluteY="325dp" />
 
   <TextView
       android:id="@+id/textCategory2"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="16dp"
-      android:layout_marginTop="15dp"
       android:fontFamily="@font/montserrat_bold"
-      android:text="PRODUCT PRICE"
+      android:text="BLOG LINK"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textProductCategory" />
+      tools:layout_editor_absoluteY="511dp" />
 
   <FrameLayout
       android:id="@+id/layoutImage"
@@ -149,11 +94,31 @@
       android:inputType="text"
       android:paddingStart="10sp"
       android:paddingEnd="10sp"
+      android:text="The Art of Weaving"
       android:textColor="#000000"
       android:textSize="14sp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+  <EditText
+      android:id="@+id/textProductName2"
+      android:layout_width="362dp"
+      android:layout_height="50dp"
+      android:layout_marginTop="8dp"
+      android:background="#939393"
+      android:backgroundTint="#E2E2E2"
+      android:ems="10"
+      android:fontFamily="@font/montserrat"
+      android:hint="Enter your link here"
+      android:inputType="text"
+      android:paddingStart="10sp"
+      android:paddingEnd="10sp"
+      android:textColor="#000000"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textCategory2" />
 
   <View
       android:id="@+id/linearLayout2"
@@ -184,7 +149,7 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="20dp"
       android:fontFamily="@font/montserrat_bold"
-      android:text="PRODUCT NAME"
+      android:text="BLOG TITLE"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/layoutImage" />
 
@@ -198,7 +163,7 @@
       android:scaleType="centerCrop"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:srcCompat="@drawable/addprodbtn" />
+      app:srcCompat="@drawable/addblogbtn" />
 
   <ProgressBar
       android:id="@+id/progressBar"
