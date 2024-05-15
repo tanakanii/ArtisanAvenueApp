@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        settingsButton = findViewById(R.id.settings_btn_profile);
-        settingsButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Settings.class)));
+        binding.settingsButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Settings.class)));
 
         preferenceManager = new PreferenceManager(getApplicationContext());
         replaceFragment(new Home());

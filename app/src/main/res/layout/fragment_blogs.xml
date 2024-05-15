@@ -7,43 +7,6 @@
     tools:context=".Blogs">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/top_nav"
-        android:gravity="end|center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/settings_btn_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:background="#00FFFFFF"
-            android:src="@drawable/settings" />
-
-        <ImageButton
-            android:id="@+id/notifications_btn_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:background="#00FFFFFF"
-            android:src="@drawable/notification" />
-
-        <ImageButton
-            android:id="@+id/cart_btn_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:background="#00FFFFFF"
-            android:src="@drawable/cart" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="85dp"
@@ -51,12 +14,12 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
-            android:layout_height="112dp"
+            android:layout_height="104dp"
             android:layout_weight="1"
             android:fontFamily="@font/montserrat_semibold"
             android:gravity="center|bottom"
