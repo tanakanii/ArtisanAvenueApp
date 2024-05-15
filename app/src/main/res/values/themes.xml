@@ -2,7 +2,10 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.ArtisanAvenue" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/custom_button_color</item>
+        <item name="colorPrimaryVariant">@color/custom_button_color</item>
+<!--        <item name="colorPrimary">@color/screen_color</item>-->
+<!--        <item name="colorPrimaryVariant">@color/screen_color</item>-->
     </style>
 
     <style name="Theme.ArtisanAvenue" parent="Base.Theme.ArtisanAvenue" />

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewBestSeller1"
+        android:layout_width="178dp"
+        android:layout_height="208dp"
+        android:src="@drawable/bg_artisan_store"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <ImageView
+        android:id="@+id/Product3"
+        android:layout_width="163dp"
+        android:layout_height="170dp"
+        android:src="@drawable/p_bg_brown_line"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="-19dp" />
+
+    <TextView
+        android:id="@+id/textViewSold1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="5.7k+ sold"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <TextView
+        android:id="@+id/textViewPrice1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="PRICE"
+        android:textColor="#974B34"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar1"
+        android:layout_width="233dp"
+        android:layout_height="41dp"
+        android:numStars="5"
+        android:progressTint="#FFEB3B"
+        android:rating="4.7"
+        android:scaleX="0.3"
+        android:scaleY="0.3"
+        tools:layout_editor_absoluteX="-75dp"
+        tools:layout_editor_absoluteY="169dp" />
+
+    <TextView
+        android:id="@+id/textViewProductName2"
+        android:layout_width="151dp"
+        android:layout_height="19dp"
+        android:fontFamily="@font/montserrat"
+        android:text="PRODUCT NAME"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="117dp"
+        android:layout_height="106dp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="9dp"
+        tools:srcCompat="@tools:sample/avatars" />
+</androidx.constraintlayout.widget.ConstraintLayout>

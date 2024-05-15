@@ -71,10 +71,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/questrial"
-                android:text="CAMARINES NORTE"
+                android:text="CAMARINES NORTE ARTISANS"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
+
         </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -87,7 +88,6 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#974B34"
-                android:drawableLeft="@drawable/filter_image"
                 android:fontFamily="@font/montserrat"
                 android:text="FILTER"
                 android:textSize="10sp"
@@ -103,7 +103,10 @@
                 app:layout_constraintTop_toBottomOf="@id/filter_btn"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent" >
+            </androidx.recyclerview.widget.RecyclerView>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
