@@ -167,25 +167,22 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView14"
+            <ImageButton
+                android:id="@+id/new_arrivals"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:layout_margin="5dp"
                 android:src="@drawable/new_arrivals" />
 
-            <ImageView
-                android:id="@+id/imageView13"
+            <ImageButton
+                android:id="@+id/featured"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:layout_marginBottom="5dp"
                 android:src="@drawable/featured" />
 
-            <ImageView
-                android:id="@+id/imageView15"
+            <ImageButton
+                android:id="@+id/trending_now"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:layout_marginBottom="5dp"
                 android:src="@drawable/trending_now" />
 
         </LinearLayout>
@@ -205,30 +202,21 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/product1_home"
-                android:layout_width="wrap_content"
-                android:layout_height="170dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:src="@drawable/product1_home" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
-            <ImageButton
-                android:id="@+id/product2_home"
-                android:layout_width="wrap_content"
-                android:layout_height="170dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:src="@drawable/product2_home" />
-
-            <ImageButton
-                android:id="@+id/imageButton9"
-                android:layout_width="wrap_content"
-                android:layout_height="170dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:src="@drawable/product3_home" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/meettheartisan_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="MEET THE ARTISANS"
+            android:textSize="20dp" />
 
 
         <!--        <RelativeLayout-->
