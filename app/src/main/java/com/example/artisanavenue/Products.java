@@ -1,5 +1,6 @@
 package com.example.artisanavenue;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.artisanavenue.adapters.ProductAdapter;
+import com.example.artisanavenue.listeners.ProductClickListener;
 import com.example.artisanavenue.models.Product;
 import com.example.artisanavenue.utilities.Constants;
 import com.example.artisanavenue.utilities.PreferenceManager;
@@ -19,14 +22,14 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
-public class Products extends Fragment {
+
+public class Products extends Fragment implements ProductClickListener {
 
     private RecyclerView recyclerView;
-    private com.example.artisanavenue.ProductAdapter productAdapter;
+    private ProductAdapter productAdapter;
     private List<Product> productList;
     private PreferenceManager preferenceManager;
     private View progressBar;
-
 
     @Nullable
     @Override
@@ -36,7 +39,7 @@ public class Products extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerViewProducts);
         progressBar = view.findViewById(R.id.progressBar3);
         productList = new ArrayList<>();
-        productAdapter = new com.example.artisanavenue.ProductAdapter(productList);
+        productAdapter = new ProductAdapter(productList, this);
 
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
         recyclerView.setAdapter(productAdapter);
@@ -47,6 +50,7 @@ public class Products extends Fragment {
         return view;
     }
 
+
     private void loadProducts() {
         FirebaseFirestore database = FirebaseFirestore.getInstance();
 
@@ -56,11 +60,14 @@ public class Products extends Fragment {
                     if (task.isSuccessful() && task.getResult() != null && !task.getResult().isEmpty()) {
                         for (QueryDocumentSnapshot documentSnapshot : task.getResult()) {
                             Product product = new Product(
+                                    documentSnapshot.getId(),
                                     documentSnapshot.getString(Constants.KEY_PRODUCT_NAME),
                                     documentSnapshot.getString(Constants.KEY_PRODUCT_CATEGORY),
                                     documentSnapshot.getString(Constants.KEY_PRODUCT_PRICE),
                                     documentSnapshot.getString(Constants.KEY_PRODUCT_DESCRIPTION),
-                                    documentSnapshot.getString(Constants.KEY_PRODUCT_IMAGE)
+                                    documentSnapshot.getString(Constants.KEY_PRODUCT_IMAGE),
+                                    documentSnapshot.getString(Constants.KEY_USER_ID),
+                                    documentSnapshot.getString(Constants.KEY_SHOP_ID)
                             );
                             productList.add(product);
                         }
@@ -68,5 +75,12 @@ public class Products extends Fragment {
                     }
                     progressBar.setVisibility(View.GONE);
                 });
+    }
+
+    @Override
+    public void onProductClicked(Product product) {
+        Intent intent = new Intent(getContext(), ProductDetailsActivity.class);
+        intent.putExtra(Constants.KEY_PRODUCT_ID, product.getId());
+        startActivity(intent);
     }
 }

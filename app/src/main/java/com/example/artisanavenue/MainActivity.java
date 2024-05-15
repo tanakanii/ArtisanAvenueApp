@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
+
     }
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -58,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
         binding.chatsBtn.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), Chats.class)));
+        binding.cartBtn.setOnClickListener(v ->
+                startActivity(new Intent(getApplicationContext(), CartActivity.class)));
     }
     private void showToast(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();

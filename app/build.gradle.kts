@@ -21,8 +21,8 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
         }
     }
@@ -48,9 +48,8 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
-
     implementation("androidx.multidex:multidex:2.0.1")
     implementation("com.makeramen:roundedimageview:2.3.0")
-
     implementation("com.github.denzcoskun:ImageSlideshow:0.1.0")
+    implementation ("com.squareup.picasso:picasso:2.8")
 }
