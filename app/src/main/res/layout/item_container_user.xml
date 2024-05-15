@@ -7,7 +7,7 @@
     android:layout_marginStart="8dp"
     android:padding="8dp">
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/imageProfile"
         android:layout_width="50dp"
         android:layout_height="50dp"

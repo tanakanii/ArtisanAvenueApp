@@ -1,89 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/top_nav"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="PRODUCT DETAILS"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/notifications_btn_profile"
+            android:layout_width="46dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/notification_btn" />
+
+        <ImageButton
+            android:id="@+id/cartBtn"
+            android:layout_width="48dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/addtocart_btn" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="406dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <ImageView
             android:id="@+id/imageProduct"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:scaleType="centerCrop" />
-
-        <TextView
-            android:id="@+id/textProductName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Product Name"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="8dp" />
 
         <TextView
             android:id="@+id/textProductPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserrat_semibold"
             android:text="Product Price"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:layout_marginTop="4dp" />
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/textProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Product Name"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
         <TextView
             android:id="@+id/textProductDescription"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="129dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
             android:text="Product Description"
             android:textColor="@android:color/black"
             android:textSize="14sp"
-            android:layout_marginTop="8dp" />
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
-        <TextView
-            android:id="@+id/textShopName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Shop Name"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp" />
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/textShopAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Shop Address"
-            android:textColor="@android:color/black"
-            android:textSize="14sp"
-            android:layout_marginTop="4dp" />
-
-        <TextView
-            android:id="@+id/textShopDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Shop Description"
-            android:textColor="@android:color/black"
-            android:textSize="14sp"
-            android:layout_marginTop="8dp" />
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="262dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/buttonAddToCart"
-            android:layout_width="match_parent"
+            android:layout_width="263dp"
             android:layout_height="wrap_content"
-            android:text="Add to Cart"
-            android:layout_marginTop="16dp" />
-
-        <Button
-            android:id="@+id/buttonChatWithSeller"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Chat with Seller" />
-
-    </LinearLayout>
-</ScrollView>
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="16dp"
+            android:text="Add to Cart" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

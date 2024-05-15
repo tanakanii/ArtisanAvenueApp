@@ -31,19 +31,21 @@
 
         <ImageButton
             android:id="@+id/notifications_btn_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="46dp"
+            android:layout_height="30dp"
             android:layout_marginEnd="8dp"
             android:background="#00FFFFFF"
-            android:src="@drawable/notification" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/notification_btn"  />
 
         <ImageButton
             android:id="@+id/cartBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="30dp"
             android:layout_marginEnd="8dp"
             android:background="#00FFFFFF"
-            android:src="@drawable/cart" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/addtocart_btn"  />
 
     </LinearLayout>
 

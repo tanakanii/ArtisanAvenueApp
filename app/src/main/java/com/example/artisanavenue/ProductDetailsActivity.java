@@ -38,12 +38,6 @@ public class ProductDetailsActivity extends AppCompatActivity {
             Toast.makeText(this, "Added to cart", Toast.LENGTH_SHORT).show();
         });
 
-        binding.buttonChatWithSeller.setOnClickListener(v -> {
-            // Chat with seller functionality
-            Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
-            intent.putExtra(Constants.KEY_USER_ID, product.getUserId());
-            startActivity(intent);
-        });
     }
 
     private void loadProductDetails() {
@@ -79,27 +73,11 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                 binding.imageProduct.setImageBitmap(bitmap);
                             }
 
-                            loadShopDetails(product.getUserId());
                         }
                     })
                     .addOnFailureListener(e -> Toast.makeText(this, "Failed to load product details", Toast.LENGTH_SHORT).show());
         }
     }
 
-    private void loadShopDetails(String userId) {
-        FirebaseFirestore database = FirebaseFirestore.getInstance();
-        database.collection(Constants.KEY_COLLECTION_SHOPS)
-                .whereEqualTo(Constants.KEY_USER_ID, userId)
-                .get()
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful() && task.getResult() != null && !task.getResult().isEmpty()) {
-                        for (QueryDocumentSnapshot documentSnapshot : task.getResult()) {
-                            binding.textShopName.setText(documentSnapshot.getString(Constants.KEY_SHOP_NAME));
-                            binding.textShopAddress.setText(documentSnapshot.getString(Constants.KEY_SHOP_ADDRESS));
-                            binding.textShopDescription.setText(documentSnapshot.getString(Constants.KEY_SHOP_DESCRIPTION));
-                        }
-                    }
-                })
-                .addOnFailureListener(e -> Toast.makeText(this, "Failed to load shop details", Toast.LENGTH_SHORT).show());
-    }
+
 }
