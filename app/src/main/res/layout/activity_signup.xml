@@ -99,32 +99,6 @@
         app:layout_constraintTop_toBottomOf="@+id/txtPassword1"
         app:layout_constraintVertical_bias="0.009" />
 
-    <ImageButton
-        android:id="@+id/skip_button"
-        android:layout_width="55dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="143dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/googleicon" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:fontFamily="@font/montserrat"
-        android:text="or"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
-
     <EditText
         android:id="@+id/txtLastName"
         android:layout_width="233dp"
@@ -151,34 +125,19 @@
         android:layout_width="238dp"
         android:layout_height="75dp"
         android:layout_marginStart="89dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="130dp"
         android:layout_marginEnd="89dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/signuplbl" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="55dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="142dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.639"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/fbicon" />
+        app:srcCompat="@drawable/signinlabel" />
 
     <EditText
         android:id="@+id/txtFirstName"
         android:layout_width="233dp"
         android:layout_height="38dp"
-        android:layout_marginTop="132dp"
         android:background="#939393"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
@@ -189,9 +148,10 @@
         android:paddingEnd="10sp"
         android:textColor="#000000"
         android:textSize="14sp"
+        android:layout_marginTop="150dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -228,7 +188,7 @@
         app:layout_constraintBottom_toTopOf="@+id/txtFirstName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <ImageView
             android:id="@+id/imageProfile"
@@ -237,7 +197,7 @@
             android:layout_gravity="center"
             android:background="@drawable/background_image"
             android:scaleType="centerCrop"
-            app:riv_oval="true"/>
+            app:riv_oval="true" />
 
         <TextView
             android:id="@+id/lblAddImage"
