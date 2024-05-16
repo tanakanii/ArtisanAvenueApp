@@ -133,8 +133,8 @@ public class SignUp extends AppCompatActivity {
         }else if (binding.txtUsername1.getText().toString().trim().isEmpty()){
             showToast("Enter email");
             return false;
-        }else if (!Patterns.EMAIL_ADDRESS.matcher(binding.txtUsername1.getText().toString()).matches()) {
-            showToast("Enter valid email");
+        }else if (!isValidGmail(binding.txtUsername1.getText().toString())) {
+            showToast("Enter a valid Gmail address (e.g., user@gmail.com)");
             return false;
         }else if (binding.txtPassword1.getText().toString().trim().isEmpty()){
             showToast("Enter password");
@@ -156,6 +156,15 @@ public class SignUp extends AppCompatActivity {
         } else {
             binding.progressBar.setVisibility(View.INVISIBLE);
         }
+    }
+
+    private boolean isValidGmail(String email) {
+        // First check if it's a valid email
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            return false;
+        }
+        // Then check if it ends with "@gmail.com"
+        return email.endsWith("@gmail.com");
     }
 
 
