@@ -2,6 +2,7 @@ package com.example.artisanavenue;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
+
         binding.settingsButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Settings.class)));
 
         preferenceManager = new PreferenceManager(getApplicationContext());
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
+
     }
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();

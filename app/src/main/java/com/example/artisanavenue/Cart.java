@@ -35,6 +35,20 @@ public class Cart {
         }
         return instance;
     }
+    public void removeCartItem(Product product, CartItemCallback callback) {
+        String productId = product.getId();
+        database.collection(Constants.KEY_COLLECTION_CART)
+                .document(userId)
+                .collection(Constants.KEY_COLLECTION_CART_ITEMS)
+                .document(productId)
+                .delete()
+                .addOnSuccessListener(aVoid -> callback.onCallback(true))
+                .addOnFailureListener(e -> callback.onCallback(false));
+    }
+
+    public interface CartItemCallback {
+        void onCallback(boolean isSuccess);
+    }
 
     public void addItem(Product product) {
         cartItems.add(product);

@@ -9,6 +9,9 @@ public class Product {
     private String image;
     private String userId;
     private String shopId;
+    private boolean isChecked;
+    private int quantity;
+
 
     public Product(String id, String name, String category, String price, String description, String image, String userId, String shopId) {
         this.id = id;
@@ -19,6 +22,7 @@ public class Product {
         this.image = image;
         this.userId = userId;
         this.shopId = shopId;
+        this.quantity = 1;
     }
 
     public Product(String name, String category, String price, String description, String image) {
@@ -27,6 +31,7 @@ public class Product {
         this.price = price;
         this.description = description;
         this.image = image;
+        this.quantity = 1;
     }
 
 
@@ -60,5 +65,19 @@ public class Product {
 
     public String getShopId() {
         return shopId;
+    }
+    public boolean isChecked() {
+        return isChecked;
+    }
+
+    public void setChecked(boolean checked) {
+        isChecked = checked;
+    }
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
