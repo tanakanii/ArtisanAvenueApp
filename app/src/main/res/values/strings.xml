@@ -2,4 +2,14 @@
     <string name="app_name">Artisan Avenue</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="artisan_categories">
+        <item>Select category</item>
+        <item>Baskets</item>
+        <item>Glass Art</item>
+        <item>Wood Carving</item>
+        <item>Ceramics</item>
+        <item>Furniture</item>
+        <item>Jewelry</item>
+    </string-array>
 </resources>

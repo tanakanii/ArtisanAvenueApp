@@ -42,27 +42,6 @@
       app:layout_constraintTop_toBottomOf="@+id/textProductPrice" />
 
   <EditText
-      android:id="@+id/textProductCategory"
-      android:layout_width="0dp"
-      android:layout_height="46dp"
-      android:layout_marginLeft="20dp"
-      android:layout_marginTop="8dp"
-      android:layout_marginRight="20dp"
-      android:background="#939393"
-      android:backgroundTint="#E2E2E2"
-      android:ems="10"
-      android:fontFamily="@font/montserrat"
-      android:hint="Enter category"
-      android:inputType="text"
-      android:paddingStart="10sp"
-      android:paddingEnd="10sp"
-      android:textColor="#000000"
-      android:textSize="14sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textCategory" />
-
-  <EditText
       android:id="@+id/textProductPrice"
       android:layout_width="0dp"
       android:layout_height="46dp"
@@ -94,16 +73,17 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/textProductName" />
 
+
   <TextView
       android:id="@+id/textCategory2"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="16dp"
-      android:layout_marginTop="15dp"
       android:fontFamily="@font/montserrat_bold"
       android:text="PRODUCT PRICE"
+      android:layout_marginTop="10dp"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textProductCategory" />
+      app:layout_constraintTop_toBottomOf="@+id/category_spinner" />
 
   <FrameLayout
       android:id="@+id/layoutImage"
@@ -213,5 +193,19 @@
       android:visibility="gone"
       app:layout_constraintBottom_toBottomOf="@+id/addProdBtn"
       app:layout_constraintEnd_toEndOf="@+id/addProdBtn" />
+
+  <Spinner
+      android:id="@+id/category_spinner"
+      android:layout_width="match_parent"
+      android:layout_height="46dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginStart="15dp"
+      android:layout_marginEnd="15dp"
+      android:background="#939393"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textCategory" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
