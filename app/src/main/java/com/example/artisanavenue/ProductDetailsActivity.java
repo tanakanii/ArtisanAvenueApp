@@ -16,12 +16,14 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import android.util.Base64;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class ProductDetailsActivity extends AppCompatActivity {
 
     private ActivityProductDetailsBinding binding;
     private Product product;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
             Toast.makeText(this, "Added to cart", Toast.LENGTH_SHORT).show();
         });
 
+        binding.backBtn.setOnClickListener(v -> onBackPressed());
     }
 
     private void loadProductDetails() {
