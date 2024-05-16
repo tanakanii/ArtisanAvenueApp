@@ -6,7 +6,7 @@
     android:id="@+id/motionLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/splash_scene"
+    app:layoutDescription="@xml/activity_main_scene"
     tools:context=".Splash">
 
     <androidx.constraintlayout.widget.ConstraintLayout
