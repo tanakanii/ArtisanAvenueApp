@@ -30,6 +30,7 @@ import com.stripe.android.paymentsheet.PaymentSheet;
 import com.stripe.android.paymentsheet.PaymentSheetResult;
 import com.stripe.android.view.PaymentFlowActivity;
 
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -75,6 +76,13 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnCar
         paymentSheet = new PaymentSheet(this, paymentSheetResult -> {
             onPaymentResult(paymentSheetResult);
         });
+
+        if (NetworkUtils.isInternetConnected(getApplicationContext())) {
+            // Device is connected to the internet
+        } else {
+            Toast.makeText(CartActivity.this,"Please ensure network connectivity",Toast.LENGTH_SHORT).show();
+            // Device is not connected to the internet
+        }
 
         totalPriceButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -225,7 +233,7 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnCar
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 params.put("customer",customerID);
-                params.put("amount", totalValueString);
+                params.put("amount","1000"+"00");
                 params.put("currency","usd");
                 params.put("automatic_payment_methods[enabled]","true");
                 return params;
@@ -252,7 +260,9 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnCar
 //        totalPriceTextView.setText(String.format("Total: ₱%.2f", totalPrice));
 //        totalPriceButton.setText(String.format("Total: ₱%.2f", totalPrice));
         totalPriceText.setText(String.format("₱%.2f", totalPrice));
-        totalValueString = totalPriceButton.getText().toString().replaceAll("[^\\d]", "");
+//        totalValueString = totalPriceButton.getText().toString().replaceAll("[^\\d]", "");
+        totalValueString = String.valueOf((int) (totalPrice * 100));
+
     }
 
     @Override
